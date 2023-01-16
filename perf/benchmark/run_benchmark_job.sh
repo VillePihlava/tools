@@ -76,9 +76,9 @@ fi
 
 pushd "${ROOT}/istio-install"
   if [[ ${ISTIO_RELEASE_VERSION} ]]; then
-    INSTALL_VERSION=1.15.1
-    echo "Setup istios release: ${ISTIO_RELEASE_VERSION}"
-    VERSION=${ISTIO_RELEASE_VERSION} ./setup_istio.sh
+    INSTALL_VERSION=${ISTIO_RELEASE_VERSION}
+    echo "Setup istio release: ${INSTALL_VERSION}"
+    VERSION=${INSTALL_VERSION} ./setup_istio.sh
   else
     # Different branch tag resides in dev release directory like /latest, /1.4-dev, /1.5-dev etc.
     INSTALL_VERSION=$(curl "https://storage.googleapis.com/istio-build/dev/${BRANCH}")
