@@ -1,6 +1,6 @@
 # Data: cpu/mem
 # Config: Ingress gateway TLS
-telemetry_mode: "none"
+telemetry_mode: "ingress-tls-listener-stats"
 conn:
     - 16
 qps:
